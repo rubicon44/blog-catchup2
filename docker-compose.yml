@@ -1,0 +1,11 @@
+version: '3'
+services:
+  gatsby:
+    build: .
+    volumes:
+      - ./:/blog-catchup2
+      - '/blog-catchup2/node_modules'
+    command: "gatsby develop --host=0.0.0.0"
+    ports:
+     - "8000:8000"
+    tty: true
