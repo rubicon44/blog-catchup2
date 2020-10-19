@@ -6,12 +6,14 @@ const Layout = ({ location, title, children }) => {
   const isRootPath = location.pathname === rootPath
   let header
 
+  // ルートパス（index.js）だった場合
   if (isRootPath) {
     header = (
-      <h1 className="main-heading">
+      // <h1 className="main-heading">
         <Link to="/">{title}</Link>
-      </h1>
+      // </h1>
     )
+    // ルートパス以外の場合（個別ぺーじなど）
   } else {
     header = (
       <Link className="header-link-home" to="/">
@@ -21,13 +23,13 @@ const Layout = ({ location, title, children }) => {
   }
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <header className="global-header">{header}</header>
-      <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
+    <div className="global-wrapper custom-wrapper" data-is-root-path={isRootPath}>
+      <header className="global-header custom-header">{header}</header>
+      <main className="custom-main">{children}</main>
+      <footer className="custom-footer">
+        © {new Date().getFullYear()}, All rights reserved.
+        {/* {` `}
+        <a href="https://www.gatsbyjs.com">株式会社モバイルクラブ</a> */}
       </footer>
     </div>
   )
