@@ -1,7 +1,6 @@
 .custom {
   &-wrapper {
     padding: 40px 0 0;
-    text-align: center;
   }
 
   &-header {
@@ -11,6 +10,7 @@
     width: 100%;
     min-width: 320px;
     padding: 10px 5px;
+    text-align: center;
     background: #fff;
     border-bottom: 1px solid #ddd;
     box-sizing: border-box;
@@ -31,6 +31,7 @@
     width: 100%;
     min-width: 320px;
     color: #fff;
+    text-align: center;
     background-color: #ff444f;
   }
 }
