@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `モバクラ｜夜のお仕事情報メディア`,
+    title: `モバクラ`,
     author: {
       name: `株式会社モバイルクラブ`,
       summary: `が執筆・編集・校正を行なっております。`,

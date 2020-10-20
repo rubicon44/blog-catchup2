@@ -23,8 +23,41 @@
   }
 
   &-main {
-    padding: 0 20px 0;
-    margin-top: 30px;
+    padding: 30px 20px 0;
+    font-family: YuGothic;
+    // 基本文字サイズ
+    font-size: 14px;
+    background-color: #f8f7f3;
+
+    > article > section > p {
+      margin-bottom: 1rem;
+    }
+  }
+
+  // h1
+  &-title {
+    font-family: YuGothic;
+    font-size: 24.5px;
+
+    &-cover {
+      > .custom-date {
+        font-size: 14px;
+      }
+    }
+  }
+
+  // section
+  &-contents-cover {
+    > h2 {
+      padding: 20px;
+      margin-left: -20px;
+      margin-right: -20px;
+      font-family: YuGothic;
+      font-size: 28px;
+      color: #fff;
+      background-color: #FF444F;
+      border-radius: 4px;
+    }
   }
 
   &-footer {
