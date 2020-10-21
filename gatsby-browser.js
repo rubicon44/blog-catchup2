@@ -6,6 +6,8 @@ import "./src/normalize.css"
 // custom CSS styles
 import "./src/style.css"
 
+// import "./src/reset.css"
+
 import "./src/custom.scss"
 
 // Highlighting for code blocks

@@ -1,3 +1,16 @@
+// 記事一覧
+.post-list {
+  &-title {
+    margin-bottom: var(--spacing-2);
+    margin-top: var(--spacing-0);
+    color: #000;
+    font-size: 17px;
+    font-weight: 550;
+    text-decoration: underline;
+  }
+}
+
+// 個別記事
 .custom {
   &-wrapper {
     padding: 40px 0 0;
