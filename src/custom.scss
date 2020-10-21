@@ -93,6 +93,7 @@
 
   &-title {
     margin: var(--spacing-0);
+    margin-bottom: 5px;
     color: #000;
     font-size: 17px;
     text-align: center;
@@ -101,7 +102,7 @@
   &-list-cover {
     > ul {
       margin: var(--spacing-0);
-      
+
       > li {
         text-indent: 17px;
       }

@@ -30,23 +30,24 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          {
-            // 目次用
-            resolve: `gatsby-transformer-remark`,
-            options: {
-              tableOfContents: {
-                heading: null,
-                maxDepth: 6,
-              },
-            },
-          },
+          // {
+          //   // 目次用（※下記記述があると、「gatsby-remark-autolink-headers」が動かない）
+          //   resolve: `gatsby-transformer-remark`,
+          //   options: {
+          //     tableOfContents: {
+          //       heading: null,
+          //       maxDepth: 6,
+          //     },
+          //   },
+          // },
           {
             // 目次id用
             resolve: `gatsby-remark-autolink-headers`,
             options: {
-              offsetY: 80,
+              offsetY: '49',
               icon: false,
               maintainCase: true,
+              elements: [`h2`],
             },
           },
           {
