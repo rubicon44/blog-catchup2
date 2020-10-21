@@ -31,6 +31,16 @@ module.exports = {
       options: {
         plugins: [
           {
+            // 目次用
+            resolve: `gatsby-transformer-remark`,
+            options: {
+              tableOfContents: {
+                heading: null,
+                maxDepth: 6,
+              },
+            },
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 630,

@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
+import Toc from "../components/toc"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -24,6 +25,7 @@ const BlogPostTemplate = ({ data, location }) => {
         <header className="custom-title-cover">
           <h1 className="custom-title" itemProp="headline">{post.frontmatter.title}</h1>
           <p className="custom-date">更新日：{post.frontmatter.date}</p>
+          <Toc data={post.tableOfContents} />
         </header>
         <section
           className="custom-contents-cover"
@@ -82,6 +84,11 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      tableOfContents(
+        absolute: false
+        pathToSlugField: "frontmatter.path"
+        maxDepth: 3
+      )
       frontmatter {
         title
         date(formatString: "YYYY/MM/DD")

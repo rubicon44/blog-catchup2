@@ -81,3 +81,30 @@
     background-color: #ff444f;
   }
 }
+
+// template
+// 目次（toc.js）
+.toc {
+  &-cover {
+    padding: 15px;
+    border: solid 1px #ccc;
+    border-radius: 4px;
+  }
+
+  &-title {
+    margin: var(--spacing-0);
+    color: #000;
+    font-size: 17px;
+    text-align: center;
+  }
+  
+  &-list-cover {
+    > ul {
+      margin: var(--spacing-0);
+      
+      > li {
+        text-indent: 17px;
+      }
+    }
+  }
+}
