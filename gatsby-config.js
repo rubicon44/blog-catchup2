@@ -41,6 +41,15 @@ module.exports = {
             },
           },
           {
+            // 目次id用
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              offsetY: 80,
+              icon: false,
+              maintainCase: true,
+            },
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 630,
