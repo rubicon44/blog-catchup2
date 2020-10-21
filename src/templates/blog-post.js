@@ -23,7 +23,7 @@ const BlogPostTemplate = ({ data, location }) => {
       >
         <header className="custom-title-cover">
           <h1 className="custom-title" itemProp="headline">{post.frontmatter.title}</h1>
-          <p className="custom-date">{post.frontmatter.date}</p>
+          <p className="custom-date">更新日：{post.frontmatter.date}</p>
         </header>
         <section
           className="custom-contents-cover"
@@ -84,7 +84,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY/MM/DD")
         description
       }
     }
