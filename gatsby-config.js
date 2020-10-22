@@ -1,3 +1,9 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
+const escapeStringRegexp = require("escape-string-regexp")
+
 module.exports = {
   siteMetadata: {
     title: `モバクラ`,
@@ -94,5 +100,22 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-styled-components`,
+    {
+      // 検索機能用
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: process.env.GATSBY_ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_ADMIN_KEY,
+        indexName: "blog-catchup2",
+        queries: require("./src/utils/algolia-queries"),
+        settings: {
+          searchableAttributes: ['body','title'],
+          indexLanguages: ['ja'],
+          queryLanguages: ['ja'],
+          attributesToSnippet: ['body:100']
+        },
+      },
+    },
   ],
 }

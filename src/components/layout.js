@@ -1,6 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import Search from "./search"
+const searchIndices = [{ name: `Pages`, title: `Pages` }]
+
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
@@ -24,7 +27,10 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div className="global-wrapper custom-wrapper" data-is-root-path={isRootPath}>
-      <header className="global-header custom-header">{header}</header>
+      <header className="global-header custom-header">
+        {header}
+        <Search indices={searchIndices} />
+      </header>
       <main className="custom-main">{children}</main>
       <footer className="custom-footer">
         © {new Date().getFullYear()}, All rights reserved.
