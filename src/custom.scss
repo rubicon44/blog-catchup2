@@ -12,27 +12,44 @@
 }
 
 // 個別記事
+.main {
+  &-body {
+    padding-bottom: 20px;
+    background-color: #f8f7f3;
+    // モバイルファーストにする
+    // display: flex;
+    // justify-content: center;
+  }
+}
+
 .custom {
   &-wrapper {
+    // モバイルファーストにする
+    // max-width: 1440px;
     padding: 40px 0 0;
   }
 
   &-header {
     position: fixed;
     top: 0px;
-    left: 0px;
     display: flex;
     width: 100%;
+    // モバイルファーストにする
+    // max-width: 1440px;
     min-width: 320px;
-    padding: 10px 5px;
+    padding: 10px 10px;
     text-align: center;
     background: #fff;
     border-bottom: 1px solid #ddd;
     box-sizing: border-box;
 
     > a {
+      width: 100%;
       color: #ff444f;
+      font-size: 18px;
       font-weight: bold;
+      font-family: YuGothic;
+      text-align: left;
       text-decoration: none;
     }
   }
@@ -42,7 +59,6 @@
     font-family: YuGothic;
     // 基本文字サイズ
     font-size: 14px;
-    background-color: #f8f7f3;
 
     > article > section > p {
       margin-bottom: 1rem;
@@ -70,7 +86,7 @@
       font-family: YuGothic;
       font-size: 28px;
       color: #fff;
-      background-color: #FF444F;
+      background-color: #ff444f;
       border-radius: 4px;
     }
   }
@@ -109,5 +125,92 @@
         text-indent: 17px;
       }
     }
+  }
+}
+
+// 人気ランキング（デモ）
+.aside-cover {
+  display: flex;
+  justify-content: center;
+}
+
+.rank {
+  &-cover {
+    max-width: 300px;
+    padding: 0 40px 0;
+    padding-bottom: 10px;
+    background-color: #ffeaeb;
+    border-radius: 5px;
+  }
+
+  &-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    > h3 {
+      max-width: 190px;
+      padding: 8px;
+      margin: var(--spacing-0);
+      color: #fff;
+      font-size: 16px;
+      background-color: #ff444f;
+      border-radius: 0 0 5px 5px;
+    }
+  }
+
+  &-list {
+    &:not(:last-of-type) {
+      margin-bottom: 35px;
+    }
+
+    &-cover {
+      list-style-type: none;
+    }
+
+    &-thub {
+      height: 141px;
+      background-color: #ddd;
+    }
+
+    &-title {
+      margin-top: 15px;
+      font-size: 16px;
+      text-decoration: underline;
+    }
+
+    &-text {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  }
+}
+
+// components
+// toLpButton.js
+.tolpbutton {
+  max-width: 450px;
+  margin: 30px auto;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #ff7d85;
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  > a {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-decoration: none;
+
+    > span {
+      display: block;
+    }
+  }
+
+  &-cover {
+    margin: 0 auto;
   }
 }

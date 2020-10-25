@@ -2,7 +2,8 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Toc from "../components/toc"
-import Bio from "../components/bio"
+import ToLpButton from "../components/toLpButton"
+// import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -32,9 +33,10 @@ const BlogPostTemplate = ({ data, location }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
+        <ToLpButton />
         <hr />
         <footer>
-          <Bio />
+          {/* <Bio /> */}
         </footer>
       </article>
       <nav className="blog-post-nav">
