@@ -31,11 +31,12 @@
 
   &-header {
     position: fixed;
-    top: 0px;
+    top: 0;
     display: flex;
     width: 100%;
     // モバイルファーストにする
     // max-width: 1440px;
+    max-width: 672px;
     min-width: 320px;
     padding: 10px 10px;
     text-align: center;

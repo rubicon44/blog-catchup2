@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 import Rank from "../components/rank"
 import Search from "./search"
+import Header from "./header"
 const searchIndices = [{ name: `Pages`, title: `Pages` }]
 
 const Layout = ({ location, title, children }) => {
@@ -31,6 +32,7 @@ const Layout = ({ location, title, children }) => {
       <header className="global-header custom-header">
         {header}
         <Search indices={searchIndices} />
+        <Header />
       </header>
       <div className="main-body">
         <main className="custom-main">{children}</main>
