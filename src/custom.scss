@@ -188,6 +188,23 @@
 }
 
 // components
+// buo.js
+.bio {
+  &-about-table {
+    font-weight: bold;
+    border: 1px solid #bbb;
+
+    > tbody > tr > td {
+      height: 40px;
+      text-align: center;
+
+      &:first-of-type {
+        background-color: #fff;
+      }
+    }
+  }
+}
+
 // toLpButton.js
 .tolpbutton {
   max-width: 450px;

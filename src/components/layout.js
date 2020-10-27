@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Rank from "../components/rank"
 import Search from "./search"
 import Header from "./header"
 const searchIndices = [{ name: `Pages`, title: `Pages` }]
@@ -36,8 +35,6 @@ const Layout = ({ location, title, children }) => {
       </header>
       <div className="main-body">
         <main className="custom-main">{children}</main>
-        {/* aside */}
-        <Rank />
       </div>
       <footer className="custom-footer">
         © {new Date().getFullYear()}, All rights reserved.

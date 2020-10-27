@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Toc from "../components/toc"
 import ToLpButton from "../components/toLpButton"
+import Rank from "../components/rank"
 // import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -35,6 +36,8 @@ const BlogPostTemplate = ({ data, location }) => {
         />
         <ToLpButton />
         <hr />
+        {/* aside */}
+        <Rank />
         <footer>
           {/* <Bio /> */}
         </footer>

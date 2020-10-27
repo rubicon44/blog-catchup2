@@ -7,7 +7,7 @@
 
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
+// import Image from "gatsby-image"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -41,7 +41,7 @@ const Bio = () => {
 
   return (
     <div className="bio">
-      {avatar && (
+      {/* {avatar && (
         <Image
           fixed={avatar}
           alt={author?.name || ``}
@@ -50,16 +50,55 @@ const Bio = () => {
             borderRadius: `50%`,
           }}
         />
-      )}
+      )} */}
       {author?.name && (
-        <p>
-          この記事は<strong>{author.name}</strong> {author?.summary || null}
-          {` `}
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>
-            ぜひツイッター・インスタグラムもフォローしてください!
-          </a>
-        </p>
-      )}
+        <div>
+          <p>「モバクラ」とはホステスさんを応援するために誕生したメディアです。</p>
+          <p>説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明</p>
+
+          <p>
+            {/* この記事は<strong>{author.name}</strong> {author?.summary || null} */}
+            {` `}
+            <a href={`https://twitter.com/${social?.twitter || ``}`}>
+              ぜひツイッター・インスタグラムもフォローしてください!
+            </a>
+          </p>
+          
+          <h4>〜About〜</h4>
+          <table border="1" className="bio-about-table">
+            <tbody>
+              <tr>
+                <td>運営会社</td>
+                <td>株式会社モバイルクラブ</td>
+              </tr>
+              <tr>
+                <td>代表者</td>
+                <td>代表取締役社長 村上奈々</td>
+              </tr>
+              <tr>
+                <td>所在地</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>設立</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>資本金</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>事業内容</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>お問い合わせ</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+       )}
     </div>
   )
 }

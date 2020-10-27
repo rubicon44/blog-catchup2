@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
+import Rank from "../components/rank"
 // import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -59,6 +60,9 @@ const BlogIndex = ({ data, location }) => {
           )
         })}
       </ol>
+      <hr />
+      {/* aside */}
+      <Rank />
     </Layout>
   )
 }
